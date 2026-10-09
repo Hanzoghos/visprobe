@@ -1,0 +1,19 @@
+torch>=2.6
+torchvision
+# Must pin 4.57.x: the Molmo2 official README requires 4.57.1; Qwen3-VL was merged in 4.57,
+# and transformers 5.x breaks Molmo2 remote code loading
+transformers==4.57.1
+accelerate
+peft
+bitsandbytes
+safetensors
+pillow
+datasets
+pyarrow
+huggingface_hub
+requests
+jinja2
+sentencepiece
+# Notes:
+# - jinja2: required by apply_chat_template (optional dependency since 5.x; still bundled in 4.57, but declared explicitly to be safe)
+# - InternVL3.5 / Molmo2 use trust_remote_code; the P0 smoke test (2026-10, RTX 3090) verified the four experimental models on 4.57.1

@@ -1,0 +1,9 @@
+{
+  "model": "molmo4b",
+  "dataset": "visual7w-test",
+  "n": 6695,
+  "accuracy": 0.8773711725168036,
+  "ece": 0.07927296982823002,
+  "brier": 0.1784160088426633,
+  "elapsed_s": 1827.9
+}

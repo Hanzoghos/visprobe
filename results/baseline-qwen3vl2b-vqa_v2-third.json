@@ -1,0 +1,9 @@
+{
+  "model": "qwen3vl2b",
+  "dataset": "vqa_v2-third-test",
+  "n": 26846,
+  "accuracy": 0.661849065037622,
+  "ece": 0.09093444468449713,
+  "brier": 0.5506376406928087,
+  "elapsed_s": 8088.9
+}

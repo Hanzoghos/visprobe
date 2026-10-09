@@ -1,0 +1,9 @@
+{
+  "model": "qwen3vl8b",
+  "dataset": "visual7w-test",
+  "n": 6695,
+  "accuracy": 0.9171023151605676,
+  "ece": 0.02567866975354743,
+  "brier": 0.1339905984994454,
+  "elapsed_s": 1522.3
+}

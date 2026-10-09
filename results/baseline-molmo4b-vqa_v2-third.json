@@ -1,0 +1,9 @@
+{
+  "model": "molmo4b",
+  "dataset": "vqa_v2-third-test",
+  "n": 26846,
+  "accuracy": 0.8671310437309097,
+  "ece": 0.1282723171422186,
+  "brier": 0.1889557586911983,
+  "elapsed_s": 7720.1
+}

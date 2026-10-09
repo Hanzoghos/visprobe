@@ -1,0 +1,33 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment secrets
+.env
+
+# Model caches and weights (weights come from HF Hub, not committed to git)
+hf-cache/
+models/
+
+# Raw/processed datasets (third-party licenses; reproduce via the download scripts, do not redistribute)
+data/raw/
+data/processed/
+data/heldout/
+data/subsets/
+
+# Training/run logs (aggregated loss curves are in results/)
+logs/
+
+# Temporary and probe artifacts
+tmp/
+*.tmp
+models/_smoke_*
+models/_probe_*
+*.incomplete
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
