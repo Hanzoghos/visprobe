@@ -5,8 +5,8 @@ Reads the per-dataset metric JSONs in results/ and writes
 results/figures/accuracy_baseline_after.svg. SVG renders natively on GitHub
 (via markdown image links) without any external service or binary asset.
 
-Retired models (qwen3b) and models without after-results (qwen7b) are drawn
-as baseline-only bars. Usage:
+Retired models (qwen3b, no result files at all) are simply omitted; models
+present only as baselines are automatically drawn with baseline-only bars. Usage:
     python scripts/make_charts.py
 """
 import json
@@ -21,7 +21,7 @@ MODELS = [
     ("qwen3vl2b", "Qwen3-VL-2B"),
     ("qwen3vl8b", "Qwen3-VL-8B"),
     ("molmo4b", "Molmo2-4B"),
-    ("qwen7b", "Qwen2.5-VL-7B (baseline only)"),
+    ("qwen7b", "Qwen2.5-VL-7B"),
 ]
 DATASETS = [
     ("snli_ve", "SNLI-VE"),

@@ -14,16 +14,18 @@ Metrics: acc = accuracy; ECE = expected calibration error (lower better); Brier 
 | Qwen3-VL-8B | after | 0.9160/0.0366/0.1383 | 0.8793/0.0350/0.2028 | 0.9171/0.0257/0.1340 | 0.9041 |
 | Molmo2-4B | baseline | 0.8720/0.0551/0.2041 | 0.8671/0.1283/0.1890 | 0.8774/0.0793/0.1784 | 0.8722 |
 | Molmo2-4B | after | 0.9096/0.0369/0.1486 | 0.8867/0.0343/0.1897 | 0.9159/0.0284/0.1369 | 0.9041 |
-| Qwen2.5-VL-7B (baseline only) | baseline | 0.7388/0.1243/0.3770 | 0.8253/0.1906/0.2388 | 0.8823/0.0842/0.1711 | 0.8155 |
-| Qwen2.5-VL-7B (baseline only) | after | — | — | — | — |
+| Qwen2.5-VL-7B | baseline | 0.7388/0.1243/0.3770 | 0.8253/0.1906/0.2388 | 0.8823/0.0842/0.1711 | 0.8155 |
+| Qwen2.5-VL-7B | after | 0.9143/0.0342/0.1433 | 0.8763/0.0178/0.2249 | 0.9080/0.0214/0.1548 | 0.8995 |
 
-## Fine-tuning gains (after−baseline, macro average; models with complete pairs only)
+## Fine-tuning gains (after−baseline, macro average)
 
 | Model | baseline macro acc | after macro acc | Δacc | ΔECE | ΔBrier |
 |---|---|---|---|---|---|
 | Qwen3-VL-2B | 0.7350 | 0.8810 | +0.146 | -0.025 | -0.250 |
+| Qwen2.5-VL-7B | 0.8155 | 0.8995 | +0.084 | -0.109 | -0.088 |
 | Qwen3-VL-8B | 0.8593 | 0.9041 | +0.045 | +0.009 | -0.092 |
 | Molmo2-4B | 0.8722 | 0.9041 | +0.032 | -0.054 | -0.032 |
 
-Notes: Qwen2.5-VL-3B is retired (training-stability incident; baseline retained). 
-Qwen2.5-VL-7B has baseline only at release time; after-results will be appended when fine-tuning completes.
+Notes: Qwen2.5-VL-3B is retired (training-stability incident; baseline retained).
+All four experimental models now have complete baseline + after results; the
+Qwen2.5-VL-7B after-evaluation finished 2026-10-10.

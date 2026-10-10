@@ -48,7 +48,7 @@ standard error under ±0.5 percentage points.
 | `qwen3vl2b` | Qwen/Qwen3-VL-2B-Instruct | qwen3_vl | ✅ baseline + after |
 | `qwen3vl8b` | Qwen/Qwen3-VL-8B-Instruct | qwen3_vl | ✅ baseline + after |
 | `molmo4b` | allenai/Molmo2-4B | molmo2 | ✅ baseline + after |
-| `qwen7b` | Qwen/Qwen2.5-VL-7B-Instruct | qwen2_vl | 🟡 baseline only (fine-tune running) |
+| `qwen7b` | Qwen/Qwen2.5-VL-7B-Instruct | qwen2_vl | ✅ baseline + after |
 | ~~`qwen3b`~~ | Qwen/Qwen2.5-VL-3B-Instruct | qwen2_vl | ⛔ retired (baseline retained for reference) |
 
 All fine-tuning is **LoRA only on the language decoder** (rank 8, ~0.25–0.5% trainable
@@ -58,6 +58,7 @@ parameters; vision tower frozen). The trained adapters are published on the Hugg
 |---|---|---|
 | Qwen3-VL-2B | [chenyeikai/VisProbe-Qwen3-VL-2B-LoRA](https://huggingface.co/chenyeikai/VisProbe-Qwen3-VL-2B-LoRA) | 49 MB |
 | Qwen3-VL-8B | [chenyeikai/VisProbe-Qwen3-VL-8B-LoRA](https://huggingface.co/chenyeikai/VisProbe-Qwen3-VL-8B-LoRA) | 99 MB |
+| Qwen2.5-VL-7B | [chenyeikai/VisProbe-Qwen2.5-VL-7B-LoRA](https://huggingface.co/chenyeikai/VisProbe-Qwen2.5-VL-7B-LoRA) | 107 MB |
 | Molmo2-4B | [chenyeikai/VisProbe-Molmo2-4B-LoRA](https://huggingface.co/chenyeikai/VisProbe-Molmo2-4B-LoRA) | 55 MB |
 
 Adapters are evaluated directly without weight merging (`PeftModel.from_pretrained`). They can
@@ -76,10 +77,13 @@ Three-dataset **macro average** accuracy (each dataset weighted equally):
 |---|---|---|---|
 | Qwen3-VL-8B | 0.859 | **0.904** | +0.045 |
 | Molmo2-4B | 0.872 | **0.904** | +0.032 |
+| Qwen2.5-VL-7B | 0.815 | 0.900 | +0.084 |
 | Qwen3-VL-2B | 0.735 | 0.881 | **+0.146** |
 
-After fine-tuning, the 8B and Molmo2-4B tie at the top; the 2B gains the most (+14.6 points)
-at roughly half the training time of the 8B — the best accuracy-per-compute point.
+After fine-tuning, the 8B and Molmo2-4B tie at the top (0.904), with the 7B close behind
+(0.900). The 2B gains the most (+14.6 points) at roughly half the training time of the 8B —
+the best accuracy-per-compute point; the 7B shows the largest *calibration* improvement
+(macro ECE 0.133 → 0.025).
 Full acc/ECE/Brier tables: [`results/SUMMARY.md`](results/SUMMARY.md);
 per-step loss/lr curves: [`results/loss_curves.csv`](results/loss_curves.csv).
 

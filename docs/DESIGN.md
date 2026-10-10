@@ -131,7 +131,7 @@ A–Z single-token encodings are asserted at `VLMScorer` initialisation for ever
 | `qwen3vl2b` ⭐ | `Qwen/Qwen3-VL-2B-Instruct` | qwen3_vl | primary lightweight; baseline + after |
 | `qwen3vl8b` | `Qwen/Qwen3-VL-8B-Instruct` | qwen3_vl | baseline + after |
 | `molmo4b` | `allenai/Molmo2-4B` | molmo2 | trust_remote_code; baseline + after |
-| `qwen7b` | `Qwen/Qwen2.5-VL-7B-Instruct` | qwen2_vl | baseline only at release (after pending) |
+| `qwen7b` | `Qwen/Qwen2.5-VL-7B-Instruct` | qwen2_vl | baseline + after |
 
 ## 7. Evaluation metrics
 

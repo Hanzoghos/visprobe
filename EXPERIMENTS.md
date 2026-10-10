@@ -109,15 +109,13 @@ bash scripts/train_eval_pipeline.sh <model-short-name>
 | Qwen3-VL-2B | ~1.1 s (dedicated) | ~7.6 h | +0.146 |
 | Qwen3-VL-8B | 2.37 s | 16.5 h | +0.045 |
 | Molmo2-4B | 3.2–5.2 s | ~22–30 h (slower when run in parallel) | +0.032 |
-| Qwen2.5-VL-7B | 3.87 s | ~27 h (estimated) | baseline only — after pending |
+| Qwen2.5-VL-7B | 3.81 s | 26.5 h | +0.084 |
 
 ## 8. Status notes
 
-- **Qwen3-VL-2B / Qwen3-VL-8B / Molmo2-4B**: baseline + after complete for all three datasets.
-- **Qwen2.5-VL-7B**: baseline complete for all three datasets; fine-tuning was still in
-  progress at release time, so after-results are intentionally absent. Once finished, drop the
-  `after-qwen7b-*.json` files into `results/` and rerun `python scripts/make_charts.py` to
-  refresh the figure.
+- **Qwen3-VL-2B / Qwen3-VL-8B / Molmo2-4B / Qwen2.5-VL-7B**: baseline + after complete for
+  all three datasets (all four experimental models finished; the 7B after-evaluation
+  completed 2026-10-10: macro acc 0.8155 → 0.8995, macro ECE 0.133 → 0.025).
 - **Qwen2.5-VL-3B**: retired. A constant lr=2e-4 run without warmup or clipping diverged at
   ~step 2300; only its baseline is retained. The current default hyperparameters fix this
   failure mode.
