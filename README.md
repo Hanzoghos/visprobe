@@ -61,6 +61,8 @@ parameters; vision tower frozen). The trained adapters are published on the Hugg
 | Qwen2.5-VL-7B | [chenyeikai/VisProbe-Qwen2.5-VL-7B-LoRA](https://huggingface.co/chenyeikai/VisProbe-Qwen2.5-VL-7B-LoRA) | 107 MB |
 | Molmo2-4B | [chenyeikai/VisProbe-Molmo2-4B-LoRA](https://huggingface.co/chenyeikai/VisProbe-Molmo2-4B-LoRA) | 55 MB |
 
+Browse all four in one place: [**VisProbe collection on the Hugging Face Hub**](https://huggingface.co/collections/chenyeikai/visprobe-lightweight-vlms-as-probabilistic-classifiers-6ac9b0abe431a8f2d554a8ba).
+
 Adapters are evaluated directly without weight merging (`PeftModel.from_pretrained`). They can
 also be reproduced locally with the documented training commands.
 
